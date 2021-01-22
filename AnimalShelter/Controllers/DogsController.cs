@@ -14,5 +14,11 @@ namespace AnimalShelter.Controllers
     {
       _db = db;
     }
+    // GET api/dogs
+    [HttpGet]
+    public ActionResult<IEnumerable<Dog>> Get()
+    {
+      return _db.Dogs.ToList();
+    }
   }
 }
