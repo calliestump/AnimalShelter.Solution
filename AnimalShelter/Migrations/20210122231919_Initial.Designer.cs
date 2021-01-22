@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimalShelter.Migrations
 {
     [DbContext(typeof(AnimalShelterContext))]
-    [Migration("20210122171217_Initial")]
+    [Migration("20210122231919_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,15 +23,25 @@ namespace AnimalShelter.Migrations
                     b.Property<int>("CatId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("catAge");
+                    b.Property<string>("catAge")
+                        .IsRequired()
+                        .HasMaxLength(25);
 
-                    b.Property<string>("catBreed");
+                    b.Property<string>("catBreed")
+                        .IsRequired()
+                        .HasMaxLength(50);
 
-                    b.Property<string>("catDescription");
+                    b.Property<string>("catDescription")
+                        .IsRequired()
+                        .HasMaxLength(500);
 
-                    b.Property<string>("catGender");
+                    b.Property<string>("catGender")
+                        .IsRequired()
+                        .HasMaxLength(6);
 
-                    b.Property<string>("catName");
+                    b.Property<string>("catName")
+                        .IsRequired()
+                        .HasMaxLength(20);
 
                     b.HasKey("CatId");
 
@@ -42,7 +52,7 @@ namespace AnimalShelter.Migrations
                         {
                             CatId = 1,
                             catAge = "1 year, 5 months",
-                            catBreed = "Maine Coon/Mix",
+                            catBreed = "Maine Coon",
                             catDescription = "Sage is a friendly cat that really enjoys being around people. She is very loving and will give you all the cuddles you desire.",
                             catGender = "Female",
                             catName = "Sage"
@@ -51,7 +61,7 @@ namespace AnimalShelter.Migrations
                         {
                             CatId = 2,
                             catAge = "8 months",
-                            catBreed = "Somali/Mix",
+                            catBreed = "Somali",
                             catDescription = "Appa is a fun energetic kitten that loves to play. Absolute sweetheart.",
                             catGender = "Male",
                             catName = "Appa"
@@ -60,7 +70,7 @@ namespace AnimalShelter.Migrations
                         {
                             CatId = 3,
                             catAge = "9 years, 3 months",
-                            catBreed = "Domestic Shorthair/Mix",
+                            catBreed = "Domestic Shorthair",
                             catDescription = "Bailey is a sweet and gentle cat who would make an amazing companion.",
                             catGender = "Female",
                             catName = "Bailey"
@@ -72,15 +82,25 @@ namespace AnimalShelter.Migrations
                     b.Property<int>("DogId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("dogAge");
+                    b.Property<string>("dogAge")
+                        .IsRequired()
+                        .HasMaxLength(25);
 
-                    b.Property<string>("dogBreed");
+                    b.Property<string>("dogBreed")
+                        .IsRequired()
+                        .HasMaxLength(50);
 
-                    b.Property<string>("dogDescription");
+                    b.Property<string>("dogDescription")
+                        .IsRequired()
+                        .HasMaxLength(500);
 
-                    b.Property<string>("dogGender");
+                    b.Property<string>("dogGender")
+                        .IsRequired()
+                        .HasMaxLength(6);
 
-                    b.Property<string>("dogName");
+                    b.Property<string>("dogName")
+                        .IsRequired()
+                        .HasMaxLength(20);
 
                     b.HasKey("DogId");
 
@@ -91,7 +111,7 @@ namespace AnimalShelter.Migrations
                         {
                             DogId = 1,
                             dogAge = "2 years, 1 month",
-                            dogBreed = "Great Dane/Mix",
+                            dogBreed = "Great Dane",
                             dogDescription = "Joel is a sweetheart that absolutely loves to play. He is great with kids and is a perfect fit to make a family complete.",
                             dogGender = "Male",
                             dogName = "Joel"
@@ -100,7 +120,7 @@ namespace AnimalShelter.Migrations
                         {
                             DogId = 2,
                             dogAge = "4 years, 3 months",
-                            dogBreed = "Pitbull, Terrier/Mix",
+                            dogBreed = "Pitbull, Terrier",
                             dogDescription = "Roswell is a fun energetic dog that loves to run around. He is a perfect dog to venture with and take on outdoor trips.",
                             dogGender = "Male",
                             dogName = "Roswell"
@@ -109,7 +129,7 @@ namespace AnimalShelter.Migrations
                         {
                             DogId = 3,
                             dogAge = "10 years, 3 months",
-                            dogBreed = "Retriever, Labrador/Mix",
+                            dogBreed = "Retriever, Labrador",
                             dogDescription = "Stone is an absolute sweetheart. She is very gentle with people and would make a perfect companion.",
                             dogGender = "Female",
                             dogName = "Stone"

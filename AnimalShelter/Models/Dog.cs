@@ -24,13 +24,13 @@ namespace AnimalShelter.Models
 
     [Required]
     [DisplayName("Dog Age")]
-    [StringLength(15, ErrorMessage = "15 Characters max")]
+    [StringLength(25, ErrorMessage = "15 Characters max")]
     public string dogAge { get; set; }
 
 
     [Required]
     [DisplayName("Dog Breed")]
-    [StringLength(15, ErrorMessage = "20 Characters max")]
+    [StringLength(50, ErrorMessage = "50 Characters max")]
     public string dogBreed { get; set; }
 
 
