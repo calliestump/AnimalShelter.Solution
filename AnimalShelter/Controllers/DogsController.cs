@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using AnimalShelter.Models;
 
 namespace AnimalShelter.Controllers
@@ -33,6 +34,15 @@ namespace AnimalShelter.Controllers
     public ActionResult<Dog> GetAction(int id)
     {
       return _db.Dogs.FirstOrDefault(entry => entry.DogId == id);
+    }
+
+    // PUT api/dogs/{id}
+    [HttpPut("{id}")]
+    public void Put(int id, [FromBody] Dog dog)
+    {
+      dog.DogId = id;
+      _db.Entry(dog).State = EntityState.Modified;
+      _db.SaveChanges();
     }
   }
 }
