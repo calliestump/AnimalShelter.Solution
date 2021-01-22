@@ -84,10 +84,9 @@ namespace AnimalShelter.Controllers
     [Route("random")]
     public ActionResult<Cat> Random()
     {
-        Random random = new Random();
-        int randomCat = random.Next(_db.Cats.ToList().Count);
-        return _db.Cats.FirstOrDefault(entry => entry.CatId == randomCat);
+      Random random = new Random();
+      int randomCat = random.Next(_db.Cats.ToList().Count);
+      return _db.Cats.FirstOrDefault(entry => entry.CatId == randomCat);
     }
   }
-
 }
