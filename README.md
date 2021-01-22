@@ -5,7 +5,7 @@
 ## By _Callie Stump_
 ---
 ## <u>**About** </u>
-### 🚩 **Description*
+### 🚩 **Description**
 TODO
 
 
@@ -13,16 +13,7 @@ TODO
 ### 🐛 Known Bugs
 There are no known bugs at this time.
 
-### **📖 User Stories**
-<details>
-<summary>Expand</summary>
 
-* As the user, I need to be able to see a list of all flavors, and I need to be able to see a list of all treats.
-* As the user, I need to be able to select a flavor, see it's details, and see a list of all of the treats that flavor is assigned to. I also need to be able to select a treat, see it's details, and see a list of all flavors it's assigned to as well.
-* As the user, I need to add new flavors to our system when they are added. I also need to add new treats to our system when they are added to Pierre's menu.
-* As a logged-in user, I need to be able to add, edit, or remove treats that a specific flavor is assigned to. I also need to be able to modify this relationship from the other side, and add or remove flavors from a specific treat.
-* I should be able to navigate to a splash page that lists all flavors and treats. Users should be able to click on an individual flavor or treat to see all the flavors/treats that belong to it.
-</details>
 <hr>
 
 ## <u>**Getting Started**</u>
@@ -34,17 +25,17 @@ Ex.) [Visual Studio Code](https://code.visualstudio.com/)
 * MySQL Community Server & Workbench (if you generate your own database)
 
 #### **Import Database with Entity Framework Core**
-1. Navigate to the "TODO" directory using your terminal.
+1. Navigate to the "AnimalShelter.Solution/AnimalShelter" directory using your terminal.
 2. Run the command 'dotnet ef database update to generate the database through Entity Framework Core.
 3. (Optional) To update the database with any changes to the code, run the command 'dotnet ef migrations add [MigrationsName] which will use Entity Framework Core's code-first principle to generate a database update. After, run the previous command 'dotnet ef database update' to update the database.
 
 ### 🔧 **Setup/Installation**
 #### **Project Editor Setup**
-1. Copy this download link: TODO
+1. Copy this download link: https://github.com/calliestump/AnimalShelter.Solution.git
 2. Open bash and go to the directory where you would like to store your cloned project.
 3. Clone the repo.
 ```
-git clone TODO
+git clone https://github.com/calliestump/AnimalShelter.Solution.git
 ```
 4. Navigate to the cloned project folder and open VS code.
 ```
@@ -69,7 +60,7 @@ git remote add origin [personal Github repo. link]
 #### **Note**: Do this is your main parent directory. You do not want to have git initialized in any other places.
 
 #### **AppSettings/Database Connection Setup**
-1. Create a new file in the "TODO" directory named appsettings.json
+1. Create a new file in the "AnimalShelter.Solution/AnimalShelter" directory named appsettings.json
 2. Add in the following code snippet to the new appsettings.json file:
 ```
 {
@@ -87,7 +78,7 @@ git remote add origin [personal Github repo. link]
 * MySQL WorkBench V: 8.0
 * Entity Framework Core V: 2.2.6
 * dotnet script, REPL
-* Identity 
+* API
 
 ------------------------------
 ## 👤 Contributor
