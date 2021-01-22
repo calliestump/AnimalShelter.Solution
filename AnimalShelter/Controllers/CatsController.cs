@@ -15,11 +15,18 @@ namespace AnimalShelter.Controllers
       _db = db;
     }
 
-    // GET api/animals
+    // GET api/cats
     [HttpGet]
     public ActionResult<IEnumerable<Cat>> Get()
     {
       return _db.Cats.ToList();
+    }
+    // POST api/cats
+    [HttpPost]
+    public void Post([FromBody] Cat cat)
+    {
+      _db.Cats.Add(cat);
+      _db.SaveChanges();
     }
   }
 
