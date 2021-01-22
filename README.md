@@ -6,9 +6,7 @@
 ---
 ## <u>**About** </u>
 ### 🚩 **Description**
-TODO
-
-
+This is an API application for an Animal Shelter. The API allows connected users to manage their database with the use of 'Http Methods' - GET, POST, PUT, DELETE, and RANDOM.
 
 ### 🐛 Known Bugs
 There are no known bugs at this time.
@@ -24,10 +22,6 @@ There are no known bugs at this time.
 Ex.) [Visual Studio Code](https://code.visualstudio.com/)
 * MySQL Community Server & Workbench (if you generate your own database)
 
-#### **Import Database with Entity Framework Core**
-1. Navigate to the "AnimalShelter.Solution/AnimalShelter" directory using your terminal.
-2. Run the command 'dotnet ef database update to generate the database through Entity Framework Core.
-3. (Optional) To update the database with any changes to the code, run the command 'dotnet ef migrations add [MigrationsName] which will use Entity Framework Core's code-first principle to generate a database update. After, run the previous command 'dotnet ef database update' to update the database.
 
 ### 🔧 **Setup/Installation**
 #### **Project Editor Setup**
@@ -64,21 +58,83 @@ git remote add origin [personal Github repo. link]
 2. Add in the following code snippet to the new appsettings.json file:
 ```
 {
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;database=firstName_lastName_TODO;uid=root;pwd=YourPassword;"
+    "DefaultConnection": "Server=localhost;Port=3306;database=firstname_lastname_animalShelter;uid=root;pwd=epicodus;"
   }
 }
 ```
+
+#### **Import Database with Entity Framework Core**
+1. Navigate to the "AnimalShelter.Solution/AnimalShelter" directory using your terminal.
+2. Run the command 'dotnet ef database update to generate the database through Entity Framework Core.
+3. (Optional) To update the database with any changes to the code, run the command 'dotnet ef migrations add [MigrationsName] which will use Entity Framework Core's code-first principle to generate a database update. After, run the previous command 'dotnet ef database update' to update the database.
+
+<hr>
+
+## <u>**API Documentation**</u>
+Base URL: ```https://localhost:5000```
+
+### **```[Http]``` Requests**
+
+**Cats  Endpoints**
+```
+GET /api/cats
+POST /api/cats
+GET /api/cats{id}
+PUT /api/cats{id}
+DELETE /api/cats/{id}
+RANDOM /api/cats/random
+```
+**Dogs Endpoints**
+```
+GET /api/dogs
+POST /api/dogs
+GET /api/dogs{id}
+PUT /api/dogs{id}
+DELETE /api/dogs/{id}
+RANDOM /api/dogs/random
+```
+### **<u>Example Query & Response</u>**
+**Query:**
+
+```https://localhost:5000/api/cats/1```
+
+**Response:**
+
+```
+{
+    "catId": 1,
+    "catName": "Sage",
+    "catGender": "Female",
+    "catAge": "1 year, 5 months",
+    "catBreed": "Maine Coon/Mix",
+    "catDescription": "Sage is a friendly cat that really enjoys being around people. She is very loving and will give you all the cuddles you desire."
+}
+```
+## **Swagger Documentation**
+Navigate through our endpoints with the use of NSwag.
+* after running ```dotnet watch run``` , go to your browser and navigate to 
+```http://localhost:5000/swagger```
+<hr>
+
+
 ## **Technologies Used**
 * Visual Studio Code 1.52.1
 * C# V:7.3
 * .NET Core V: 2.2.0
-* ASP.NET Core MVC
-* ASP.NET Core Razor Pages
 * MySQL WorkBench V: 8.0
 * Entity Framework Core V: 2.2.6
 * dotnet script, REPL
 * API
+* NSwag
+* Postman
+
 
 ------------------------------
 ## 👤 Contributor
