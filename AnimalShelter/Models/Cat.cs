@@ -9,6 +9,14 @@ namespace AnimalShelter.Models
   {
     public int CatId { get; set; }
 
+    public string catImage { get; set; }
+
+    [Required]
+    [DisplayName("Spayed (Yes/No)")]
+    [StringLength(3, ErrorMessage = "3 Characters max")]
+    public string catFixed { get; set; }
+
+
     [Required]
     [DisplayName("Cat Name")]
     [StringLength(20, ErrorMessage = "15 Characters max")]
