@@ -20,5 +20,12 @@ namespace AnimalShelter.Controllers
     {
       return _db.Dogs.ToList();
     }
+    // POST api/dogs
+    [HttpPost]
+    public void Post([FromBody] Dog dog)
+    {
+      _db.Dogs.Add(dog);
+      _db.SaveChanges();
+    }
   }
 }
