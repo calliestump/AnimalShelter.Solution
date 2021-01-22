@@ -8,9 +8,7 @@ namespace AnimalShelter.Models
   public class Cat
   {
     public int CatId { get; set; }
-
-    public string catImage { get; set; }
-
+    
     [Required]
     [DisplayName("Spayed/Neutrued (Yes/No)")]
     [StringLength(3, ErrorMessage = "3 Characters max")]
