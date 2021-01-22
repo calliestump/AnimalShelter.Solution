@@ -2,9 +2,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AnimalShelter.Models
 {
-  public class AnimalShelter : DbContext
+  public class AnimalShelterContext : DbContext
   {
-    public AnimalShelter(DbContextOptions<AnimalShelter> options)
+    public AnimalShelterContext(DbContextOptions<AnimalShelterContext> options)
       : base (options)
     { 
     }
