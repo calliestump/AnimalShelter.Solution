@@ -12,7 +12,7 @@ namespace AnimalShelter.Models
     public string catImage { get; set; }
 
     [Required]
-    [DisplayName("Spayed (Yes/No)")]
+    [DisplayName("Spayed/Neutrued (Yes/No)")]
     [StringLength(3, ErrorMessage = "3 Characters max")]
     public string catFixed { get; set; }
 

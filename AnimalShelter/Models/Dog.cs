@@ -15,6 +15,11 @@ namespace AnimalShelter.Models
     [StringLength(20, ErrorMessage = "15 Characters max")]
     public string dogName { get; set; }
 
+    [Required]
+    [DisplayName("Spayed/Neutrued (Yes/No)")]
+    [StringLength(3, ErrorMessage = "3 Characters max")]
+    public string dogFixed { get; set; }
+
 
     [Required]
     [DisplayName("Dog Gender")]
