@@ -2,14 +2,16 @@
 using AnimalShelter.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AnimalShelter.Migrations
 {
     [DbContext(typeof(AnimalShelterContext))]
-    partial class AnimalShelterContextModelSnapshot : ModelSnapshot
+    [Migration("20210123002027_Other")]
+    partial class Other
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -177,48 +179,9 @@ namespace AnimalShelter.Migrations
                         .IsRequired()
                         .HasMaxLength(20);
 
-                    b.Property<string>("otherSpecies")
-                        .IsRequired()
-                        .HasMaxLength(20);
-
                     b.HasKey("OtherId");
 
                     b.ToTable("Others");
-
-                    b.HasData(
-                        new
-                        {
-                            OtherId = 1,
-                            otherAge = "2 years, 1 month",
-                            otherBreed = "Great Dane",
-                            otherDescription = "Joel is a sweetheart that absolutely loves to play. He is great with kids and is a perfect fit to make a family complete.",
-                            otherFixed = "No",
-                            otherGender = "Male",
-                            otherName = "Joel",
-                            otherSpecies = "Rabbit"
-                        },
-                        new
-                        {
-                            OtherId = 2,
-                            otherAge = "4 years, 3 months",
-                            otherBreed = "Pitbull, Terrier",
-                            otherDescription = "Roswell is a fun energetic dog that loves to run around. He is a perfect dog to venture with and take on outdoor trips.",
-                            otherFixed = "Unknown",
-                            otherGender = "Male",
-                            otherName = "Roswell",
-                            otherSpecies = "Bearded Dragon"
-                        },
-                        new
-                        {
-                            OtherId = 3,
-                            otherAge = "10 years, 3 months",
-                            otherBreed = "Retriever, Labrador",
-                            otherDescription = "Stone is an absolute sweetheart. She is very gentle with people and would make a perfect companion.",
-                            otherFixed = "Yes",
-                            otherGender = "Female",
-                            otherName = "Stone",
-                            otherSpecies = "Rabbit"
-                        });
                 });
 #pragma warning restore 612, 618
         }

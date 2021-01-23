@@ -8,7 +8,7 @@ namespace AnimalShelter.Models
   public class Cat
   {
     public int CatId { get; set; }
-    
+
     [Required]
     [DisplayName("Spayed/Neutrued (Yes/No)")]
     [StringLength(3, ErrorMessage = "3 Characters max")]
@@ -17,7 +17,7 @@ namespace AnimalShelter.Models
 
     [Required]
     [DisplayName("Cat Name")]
-    [StringLength(20, ErrorMessage = "15 Characters max")]
+    [StringLength(20, ErrorMessage = "20 Characters max")]
     public string catName { get; set; }
 
 
@@ -29,13 +29,13 @@ namespace AnimalShelter.Models
 
     [Required]
     [DisplayName("Cat Age")]
-    [StringLength(25, ErrorMessage = "15 Characters max")]
+    [StringLength(25, ErrorMessage = "25 Characters max")]
     public string catAge { get; set; }
 
 
     [Required]
     [DisplayName("Cat Breed")]
-    [StringLength(50, ErrorMessage = "20 Characters max")]
+    [StringLength(50, ErrorMessage = "50 Characters max")]
     public string catBreed { get; set; }
 
 

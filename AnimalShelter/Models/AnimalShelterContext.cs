@@ -12,6 +12,8 @@ namespace AnimalShelter.Models
     public DbSet<Cat> Cats { get; set; }
     public DbSet<Dog> Dogs { get; set; }
 
+    public DbSet<Other> Others { get; set; }
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
       builder.Entity<Cat>()
@@ -25,6 +27,12 @@ namespace AnimalShelter.Models
             new Dog {DogId = 1, dogName = "Joel", dogFixed= "No", dogGender="Male", dogAge = "2 years, 1 month", dogBreed = "Great Dane", dogDescription="Joel is a sweetheart that absolutely loves to play. He is great with kids and is a perfect fit to make a family complete."},
             new Dog {DogId = 2, dogName = "Roswell", dogFixed= "Yes", dogGender="Male", dogAge = "4 years, 3 months", dogBreed = "Pitbull, Terrier", dogDescription="Roswell is a fun energetic dog that loves to run around. He is a perfect dog to venture with and take on outdoor trips."},
             new Dog {DogId = 3, dogName = "Stone", dogFixed= "Yes", dogGender="Female", dogAge = "10 years, 3 months", dogBreed = "Retriever, Labrador", dogDescription="Stone is an absolute sweetheart. She is very gentle with people and would make a perfect companion."}
+          );
+      builder.Entity<Other>()
+          .HasData(
+            new Other {OtherId = 1, otherName = "Joel", otherSpecies = "Rabbit", otherFixed= "No", otherGender="Male", otherAge = "2 years, 1 month", otherBreed = "Great Dane", otherDescription="Joel is a sweetheart that absolutely loves to play. He is great with kids and is a perfect fit to make a family complete."},
+            new Other {OtherId = 2, otherName = "Roswell", otherSpecies = "Bearded Dragon", otherFixed= "Unknown", otherGender="Male", otherAge = "4 years, 3 months", otherBreed = "Pitbull, Terrier", otherDescription="Roswell is a fun energetic dog that loves to run around. He is a perfect dog to venture with and take on outdoor trips."},
+            new Other {OtherId = 3, otherName = "Stone", otherSpecies = "Rabbit", otherFixed= "Yes", otherGender="Female", otherAge = "10 years, 3 months", otherBreed = "Retriever, Labrador", otherDescription="Stone is an absolute sweetheart. She is very gentle with people and would make a perfect companion."}
           );
     }
   }
