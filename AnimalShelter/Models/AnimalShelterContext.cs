@@ -31,7 +31,7 @@ namespace AnimalShelter.Models
       builder.Entity<Other>()
           .HasData(
             new Other {OtherId = 1, otherName = "Oreo", otherSpecies = "Rabbit", otherFixed= "Unknown", otherGender="Male", otherAge = "1 year", otherDescription= "Oreo is light in color and is very good with human contact. He really enjoys people."},
-            new Other {OtherId = 2, otherName = "Smaug", otherSpecies = "Bearded Dragon", otherFixed= "Yes", otherGender="Female", otherAge = "3 years, 3 months", otherDescription="Roswell is a fun energetic dog that loves to run around. He is a perfect dog to venture with and take on outdoor trips."},
+            new Other {OtherId = 2, otherName = "Smaug", otherSpecies = "Bearded Dragon", otherFixed= "Yes", otherGender="Female", otherAge = "3 years, 3 months", otherDescription="Smaug has beautiful colors and loves to run around. He is a gorgeous bearded dragon and would make a great addition to a family."},
             new Other {OtherId = 3, otherName = "Bernie", otherSpecies = "Rabbit", otherFixed= "Yes", otherGender="Female", otherAge = "2 years, 1 month", otherBreed = "Short Hair", otherDescription= "Bernie is darker in color and has beautiful silky fur. He loves to be around people and would make a perfect addition for a family."}
           );
     }
