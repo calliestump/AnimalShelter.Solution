@@ -38,8 +38,6 @@ namespace AnimalShelter.Models
     [StringLength(25, ErrorMessage = "25 Characters max")]
     public string otherAge { get; set; }
 
-
-    [Required]
     [DisplayName("Breed")]
     [StringLength(50, ErrorMessage = "50 Characters max")]
     public string otherBreed { get; set; }
